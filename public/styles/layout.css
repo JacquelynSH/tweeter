@@ -14,7 +14,7 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -24,6 +24,39 @@ body {
 .logo {
   font-family: "bungee";
 }
+
+/*
+body {
+  color: #f9f9f8;
+  background-color: #d9633f;
+  font-size: 24px;
+  font-family: "Source sans pro";
+  border-radius: 10px;
+}
+
+.nav-bar {
+  background-color: #5650b0;
+  margin: 5px 5px 5px 5px;
+
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+}
+
+.logo {
+  font-family: "bungee";
+  font-size: 150%;
+}
+
+.new-tweet {
+float: right;
+margin-right: 5%;
+} */
+
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
