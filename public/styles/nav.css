@@ -1,0 +1,22 @@
+
+.nav-bar {
+  height: 120px;
+  width: auto;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-top: 50px;
+  /* border-radius: 10px; */
+  font-family: "Bungee";
+}
+
+.logo {
+  font-family: "bungee";
+  font-size: 150%;
+  padding-left: 1.5em;
+}
+
+.new-tweet {
+  font-family: "source sans pro";
+  float: right;
+  padding-right: 1.5em;
+}
