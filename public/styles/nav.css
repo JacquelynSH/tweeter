@@ -2,7 +2,7 @@
 .nav-bar {
   height: 120px;
   width: auto;
-  background-color: #4056A1;
+  background-color: #735bb5;
   color: #FFFFFF;
   padding-top: 50px;
   /* border-radius: 10px; */
@@ -17,10 +17,29 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background-color:rgb(242, 189, 115);
   position: relative;
   z-index: 1;
-  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/connected.png"); */
+
+
+  background:
+	linear-gradient(
+		limegreen,
+		transparent
+	),
+	linear-gradient(
+		90deg,
+		skyblue,
+		transparent
+	),
+	linear-gradient(
+		-90deg,
+		coral,
+		transparent
+	);
+
+background-blend-mode: screen;
+
 }
 
 
@@ -39,5 +58,6 @@
 .down-arrow {
   display: flex;
   justify-content: center;
+  color: magenta;
 }
 
