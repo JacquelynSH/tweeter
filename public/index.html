@@ -20,6 +20,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
     <!-- Font awesome! -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -47,14 +48,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section method="POST" action="/tweets/">
-        <h2>Compose Tweet</h2>
-        <form>
+      <section class="footer">
+        <form method="POST" action="/tweets">
+          <div class="upper-container">
           <label class="humming-text"for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <textarea class="text-area" name="text" id="tweet-text"></textarea>
+            <div class="border-area"> </div>
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="characters">140</output>
           </div>
         </form>
       </section>
