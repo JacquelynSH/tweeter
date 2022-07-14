@@ -37,29 +37,36 @@
     </nav>
 
     <header class="header">
-      <div>
+      <div class="profile-picture">
           <img src="/images/profile-hex.png">
       </div>
       <br>
       <div class="name">
-          <h2>Your Name</h2>
+          <h2>Jackie 🐙</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="footer">
+      <section class="tweet-input-container">
         <form method="POST" action="/tweets">
           <div class="upper-container">
-          <label class="humming-text"for="tweet-text">What are you humming about?</label>
-            <textarea class="text-area" name="text" id="tweet-text"></textarea>
-            <div class="border-area"> </div>
+            <textarea class="text-area" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          </div>
+            <div class="border-area">
             <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id="characters">140</output>
           </div>
         </form>
       </section>
-
+      <!-- <article class="article">
+        <header>
+          <p>This is a sentence</p>
+        </header>
+        <footer>
+          <p>This, is also a sentence</p>
+        </footer>
+      </article> -->
     </main>
   </body>
 </html>
