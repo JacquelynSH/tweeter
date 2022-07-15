@@ -46,16 +46,38 @@
   margin-top: .5rem;
 }
 
-.tweet-container {
+/* .tweet-container {
   color: #735bb5;
   border-style: solid;
   border-color: #735bb5;
   border-width: .3rem;
   font-family: "source sans pro";
+} */
+
+.first-tweet-container {
+  color: #735bb5;
+  border-style: solid;
+  border-color: #735bb5;
+  border-width: .3rem;
+  font-family: "source sans pro";
+  margin-bottom: 3rem;
 }
-.tweet-container:hover {
+.second-tweet-container {
+color: #735bb5;
+  border-style: solid;
+  border-color: #735bb5;
+  border-width: .3rem;
+  font-family: "source sans pro";
+}
+
+.first-tweet-container:hover {
   box-shadow:  5px 5px 8px #9e91c2;
   }
+
+.second-tweet-container:hover {
+  box-shadow:  5px 5px 8px #9e91c2;
+  }
+
 
 
 .tweet-container header {
