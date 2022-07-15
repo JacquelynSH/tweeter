@@ -10,7 +10,7 @@ $(document).ready(function() {
     $("#characters").text(calculateLength);
     if (calculateLength < 0) {
       $("#characters").css({
-        "color": "red"
+        "color": "magenta"
       })
     } else {
       $("#characters").css({ "color": "gray"})
