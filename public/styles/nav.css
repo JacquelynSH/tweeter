@@ -59,11 +59,12 @@
   display: flex;
   justify-content: center;
   color: magenta;
+  position: relative;
 }
 
-/* .down-arrow:hover {
-
-} */
+.down-arrow:hover {
+top: 7px;
+}
 
 .profile-picture {
   margin-top: 7rem;
