@@ -40,6 +40,16 @@
   margin-top: .5rem;
 }
 
+.tweet-button:hover {
+  box-shadow:  5px 5px 8px #9e91c2;
+}
+
+.tweet-button:active {
+  background-color:#aa9bcf
+}
+
+
+
 .counter {
   font-family: "bungee";
   color: #735bb5;
