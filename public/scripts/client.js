@@ -10,9 +10,21 @@ $( document ).ready(function() {
     event.preventDefault();
     console.log($(this).serialize())
 
+    const tweetText = $(this).find("#tweet-text");
+    const value = tweetText.val();
+    const calculateLength = value.length;
+    const maxLength = 140;
+    if (value === "") {
+      alert("Empty tweet, oh no!");
+      return false;
+    }
+    if (calculateLength > maxLength) {
+      alert("Character count exceeded");
+      return false;
+    }
   });
-  function loadTweets(){
 
+  function loadTweets(){
      $.ajax('/tweets', {method: 'GET', dataType: 'JSON'})
      .then(function (tweetData) {
         console.log("success!:", tweetData);
