@@ -8,7 +8,15 @@ $(document).ready(function() {
     const calculateLength = maxLength - value.length;
 
     $("#characters").text(calculateLength);
-    if (calculateLength < 0) {
+
+    if (value === null) {
+
+      alert("Tweet box empty!");
+
+    } else if (value.length > maxLength) {
+      alert("Tweet to long!");
+
+    }else if (calculateLength < 0) {
       $("#characters").css({
         "color": "magenta"
       })
@@ -16,4 +24,5 @@ $(document).ready(function() {
       $("#characters").css({ "color": "gray"})
     }
   })
+
 });

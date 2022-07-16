@@ -100,10 +100,13 @@
 
 .flag-icon:hover {
   color: magenta;
+  transform: rotateY(180deg);
 }
 .retweet-icon:hover {
   color: magenta;
+  transform: rotateY(180deg);
 }
 .thumbs-icon:hover {
   color: magenta;
+  transform: rotateY(180deg);
 }

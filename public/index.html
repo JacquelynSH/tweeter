@@ -25,6 +25,7 @@
     <!-- Font awesome! -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -40,7 +41,6 @@
       <div class="profile-picture">
           <img src="/images/profile-hex.png" alt="User profile picture">
       </div>
-      <!-- <br> -->
       <div class="name">
           <h2>Jackie!</h2>
       </div>
@@ -49,7 +49,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="tweet-input-container">
-        <form method="POST" action="/tweets">
+        <form method="POST" action="/tweets" id="text-form">
           <div class="upper-container">
             <textarea class="text-area" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           </div>
