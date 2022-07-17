@@ -5,6 +5,8 @@
  */
 
 
+
+
 $( document ).ready(function() {
   $( "#text-form" ).submit(function( event ) {
     event.preventDefault();
@@ -22,25 +24,51 @@ $( document ).ready(function() {
       alert("Character count exceeded");
       return false;
     }
+
+      $.ajax('/tweets', {method: 'POST', data: $(this).serialize()})
+     .then(function () {
+      $('#tweets-container').empty();
+        loadTweets();
+      $("#tweet-text").val('');
+      //reset the counter -
+
+
+        $('#characters').text(140);
+
+
+        })
   });
 
-  function loadTweets(){
-     $.ajax('/tweets', {method: 'GET', dataType: 'JSON'})
-     .then(function (tweetData) {
-        console.log("success!:", tweetData);
-        renderTweets(tweetData);
-  });
-}
-  loadTweets();
-});
+  // if user already exists - ......
 
-const renderTweets = function(tweets) {
+
+
+   const renderTweets = function(tweets) {
   console.log("TWEETS", tweets)
   for (const tweet of tweets) {
     const element = createTweetElement(tweet)
-    $('#tweets-container').append(element);
+    $('#tweets-container').prepend(element);
   }
 }
+
+function loadTweets() {
+  $.ajax('/tweets', {method: 'GET', dataType: 'JSON'})
+  .then(function (tweetData) {
+    console.log("success!:", tweetData);
+    renderTweets(tweetData);
+  });
+}
+loadTweets();
+});
+
+// I need to get the info from $( "#text-form" ).submit into a new tweet I think.....?
+// function to take in the get request and post it into createTweetElement?
+// call loadTweets here?
+//
+
+
+
+
 
 const createTweetElement = (tweet) => {
 let $tweet =  `<article class="tweet-container">

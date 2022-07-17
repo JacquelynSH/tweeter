@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   console.log("ready!");
 
@@ -9,20 +11,12 @@ $(document).ready(function() {
 
     $("#characters").text(calculateLength);
 
-    if (value === null) {
-
-      alert("Tweet box empty!");
-
-    } else if (value.length > maxLength) {
-      alert("Tweet to long!");
-
-    }else if (calculateLength < 0) {
-      $("#characters").css({
-        "color": "magenta"
-      })
-    } else {
-      $("#characters").css({ "color": "gray"})
-    }
+      if (calculateLength < 0) {
+        $("#characters").css({
+         "color": "magenta"
+        })
+      } else {
+        $("#characters").css({ "color": "#735bb5"})
+      };
   })
-
 });
