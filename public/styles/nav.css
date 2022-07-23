@@ -2,7 +2,7 @@
 .nav-bar {
   height: 12%;
   width: 100%;
-  background-color: #735bb5;
+  /* background-color: #735bb5; */
   color: #FFFFFF;
   padding-top: 2rem;
   font-family: "Bungee";
@@ -129,4 +129,19 @@ top: 7px;
 
 .profile-picture {
   margin-top: 8rem;
+}
+
+@media only screen and (min-width: 1024px){
+  .nav-bar {
+    background-color: #735bb5;
+  }
+  .header {
+    width: 27em;
+    height: 19em;
+    margin-left: 3em;
+    margin-top: 1em;
+  }
+  .profile-picture {
+    margin-top:5rem;
+  }
 }
