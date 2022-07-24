@@ -41,7 +41,7 @@
 
     <header class="header">
       <div class="profile-picture">
-          <img src="/images/profile-hex.png" alt="User profile picture">
+          <img src="/images/teenager.png" alt="User profile picture">
       </div>
       <div class="name">
           <h2>Jackie!</h2>
@@ -50,6 +50,15 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <div class="empty-tweet-error">
+          <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
+            <strong>Oh No! You forgot to tweet! try again below</strong></div>
+          </div>
+        <div class="long-tweet-error">
+          <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
+            <strong>Oh No! Your tweet is to long, please keep it to 140 characters or less.</strong></div>
+        </div>
+        
       <section class="tweet-input-container">
         <form method="POST" action="/tweets" id="text-form">
           <div class="upper-container">
@@ -59,7 +68,7 @@
             <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id="characters">140</output>
           </div>
-        </form>
+        </form> 
       </section>
       <section id="tweets-container">
       </section>
