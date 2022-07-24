@@ -7,21 +7,24 @@
 $(document).ready(function() {
   $("#text-form").submit(function(event) {
     event.preventDefault();
-    console.log($(this).serialize());
-    const tweetText = $(this).find("#tweet-text");
-    const value = tweetText.val();
-    const calculateLength = value.length;
+    const formData = $(this).serialize();
+    const decodeData = decodeURI(formData).slice(5).length;
     const maxLength = 140;
-    if (value === "") {
-      alert("Empty tweet, oh no!");
-      return false;
-    }
-    if (calculateLength > maxLength) {
-      alert("Character count exceeded");
-      return false;
-    }
+    console.log(decodeData);
 
-    $.ajax('/tweets', {method: 'POST', data: $(this).serialize()})
+    if (!decodeData) {
+      const emptyError = $(".empty-tweet-error").slideDown("slow");
+      return;
+    }
+    if (decodeData > maxLength) {
+      const lengthError = $(".long-tweet-error").slideDown("slow");
+      return;
+    } else {
+      $(".long-tweet-error").slideUp("fast");
+      $(".empty-tweet-error").slideUp("fast");
+    }
+      
+  $.ajax('/tweets', {method: 'POST', data: $(this).serialize()})
       .then(function() {
         $('#tweets-container').empty();
         loadTweets();
@@ -48,16 +51,22 @@ $(document).ready(function() {
   loadTweets();
 });
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (tweet) => {
   let $tweet =  `<article class="tweet-container">
   <header>
     <div class="user-icon">
       <img src=${tweet.user.avatars}>
-      <span class="name-of-user">${tweet.user.name}</span>
+      <span class="name-of-user">${escape(tweet.user.name)}</span>
     </div>
-      <span class="user-name">${tweet.user.handle}</span>
+      <span class="user-name">${escape(tweet.user.handle)}</span>
   </header>
-    <div class="user-tweet"><strong>${tweet.content.text}</strong></div>
+    <div class="user-tweet"><strong>${escape(tweet.content.text)}</strong></div>
   <footer>
     <p>${timeago.format(tweet.created_at)}</p>
     <div class="tiny-icons">
