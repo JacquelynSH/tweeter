@@ -8,16 +8,14 @@
   background-color: #99c7db;
   width: 90%;
 }
-/* .error-container {
+
+.empty-tweet-error {
   border-style: solid;
   color: rgb(255, 166, 0);
   height: 32px;
   padding-top: 0px;
   margin-top: 17px;
   background-color: #735bb5;
-} */
-
-/* .error-empty-message {
   border-style: solid;
   color: rgb(255, 166, 0);
   height: 32px;
@@ -26,23 +24,34 @@
   background-color: #735bb5;
   display: flex;
   justify-content: center;
+  display: none;
+} 
+
+.long-tweet-error {
+  border-style: solid;
+  color: rgb(255, 166, 0);
+  height: 32px;
+  padding-top: 0px;
+  margin-top: 17px;
+  background-color: #735bb5;
+  border-style: solid;
+  color: rgb(255, 166, 0);
+  height: 32px;
+  padding-top: 0px;
+  margin-top: 17px;
+  background-color: #735bb5;
+  display: flex;
+  justify-content: center;
+  display: none;
 }
 
-.error-message {
-  border-style: solid;
-  color: rgb(255, 166, 0);
-  height: 32px;
-  padding-top: 0px;
-  margin-top: 17px;
-  background-color: #735bb5;
-  display: flex;
-  justify-content: center;
-} */
+
 
 .tweet-input-container {
   width: 100%;
   margin: auto;
   padding-bottom: 2rem;
+
 }
 
 .upper-container textarea {
@@ -138,9 +147,9 @@
 }
 
 .flag-icon:hover {
-  color: magenta;
+  color: magenta; 
   /* transform: rotateY(180deg); */
-}
+ }
 
 .retweet-icon:hover {
   color: magenta;
@@ -148,7 +157,7 @@
 
 }
 .thumbs-icon:hover {
-  color: magenta;
+  color: magenta; 
   /* transform: rotateY(180deg); */
   animation: shake 0.5s;
 }
@@ -169,4 +178,5 @@
   .container {
     margin-right: 3em;
   }
-}
+} 
+
