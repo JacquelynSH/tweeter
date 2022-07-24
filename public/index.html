@@ -38,7 +38,6 @@
         <div class="down-arrow"><i class="fa-solid fa-angles-down fa-bounce"></i></div>
       </span>
     </nav>
-
     <header class="header">
       <div class="profile-picture">
           <img src="/images/teenager.png" alt="User profile picture">
@@ -47,7 +46,6 @@
           <h2>Jackie!</h2>
       </div>
   </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
         <div class="empty-tweet-error">
@@ -58,7 +56,6 @@
           <div class="error-icon"><i class="fa-solid fa-circle-exclamation"></i>
             <strong>Oh No! Your tweet is to long, please keep it to 140 characters or less.</strong></div>
         </div>
-        
       <section class="tweet-input-container">
         <form method="POST" action="/tweets" id="text-form">
           <div class="upper-container">
@@ -66,7 +63,7 @@
           </div>
             <div class="border-area">
             <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id="characters">140</output>
+            <output name="counter" class="character-counter" for="tweet-text" id="characters">140</output>
           </div>
         </form> 
       </section>

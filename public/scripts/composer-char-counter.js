@@ -3,7 +3,7 @@
 $(document).ready(function() {
   console.log("ready!");
 
-  $('#tweet-text').on("input", function(e) {
+  $('#tweet-text').on("input", function(e) { 
     const value = e.target.value;
     console.log(value.length);
     const maxLength = 140;
