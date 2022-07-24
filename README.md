@@ -19,6 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of main page for tablet size, 1023px or less"](/Users/jacquelynhaug/tweeter/docs/tweeter-screenshot.png)
-!["Screenshot of main page for full size screen, 1024px +"](/Users/jacquelynhaug/tweeter/docs/tweeter-screenshot1.png)
-!["Screenshot of composed tweets"](/Users/jacquelynhaug/tweeter/docs/tweeter-screenshot2.png)
+!["Screenshot of main page for tablet size, 1023px or less"](https://github.com/JacquelynSH/tweeter/blob/master/docs/tweeter-screenshot.png)
+!["Screenshot of main page for full size screen, 1024px +"](https://github.com/JacquelynSH/tweeter/blob/master/docs/tweeter-screenshot1.png)
+!["Screenshot of composed tweets"](https://github.com/JacquelynSH/tweeter/blob/master/docs/tweeter-screenshot2.png)
